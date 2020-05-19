@@ -1,6 +1,6 @@
 variable "project" {
   type        = string
-  description = "The Google Cloud Platform project to deploy the Nomad cluster to."
+  description = "The Google Cloud Platform project to deploy the QuakeJS server to."
 }
 
 variable "credentials" {
