@@ -18,6 +18,8 @@ resource "google_compute_firewall" "allow_icmp" {
   allow {
     protocol = "icmp"
   }
+
+  source_ranges = ["0.0.0.0/0"]
 }
 
 resource "google_compute_firewall" "allow_ssh" {
@@ -28,6 +30,7 @@ resource "google_compute_firewall" "allow_ssh" {
     protocol = "tcp"
     ports    = ["22"]
   }
+  source_ranges = ["0.0.0.0/0"]
 }
 
 resource "google_compute_firewall" "allow_http" {
@@ -38,6 +41,7 @@ resource "google_compute_firewall" "allow_http" {
     protocol = "tcp"
     ports    = ["80"]
   }
+  source_ranges = ["0.0.0.0/0"]
 }
 
 resource "google_compute_firewall" "allow_quake_server_ws" {
@@ -48,4 +52,5 @@ resource "google_compute_firewall" "allow_quake_server_ws" {
     protocol = "tcp"
     ports    = ["27960"]
   }
+  source_ranges = ["0.0.0.0/0"]
 }
