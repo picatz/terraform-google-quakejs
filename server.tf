@@ -20,6 +20,15 @@ resource "google_compute_instance" "quakejs" {
     }
   }
 
+  service_account {
+    # https://developers.google.com/identity/protocols/googlescopes
+    scopes = [
+      "https://www.googleapis.com/auth/compute.readonly",
+      "https://www.googleapis.com/auth/logging.write",
+      "https://www.googleapis.com/auth/monitoring.write",
+    ]
+  }
+
   metadata = {
     enable-oslogin = true
   }
