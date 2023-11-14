@@ -17,7 +17,7 @@ variable "region" {
 
 variable "image" {
   type        = string
-  default     = "ubuntu-os-cloud/ubuntu-1804-lts"
+  default     = "ubuntu-os-cloud/ubuntu-2004-lts"
   description = "The VM image name to use."
 }
 
@@ -41,7 +41,7 @@ variable "cidr_range" {
 
 variable "machine_type" {
   type        = string
-  default     = "n1-standard-2"
+  default     = "n1-standard-4"
   description = "The VM machine type for the QuakeJS server."
 }
 
